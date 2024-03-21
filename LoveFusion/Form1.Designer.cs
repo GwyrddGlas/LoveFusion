@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Button_Love2d = new Button();
             folderBrowserDialog = new FolderBrowserDialog();
             TextBox_Love2dPath = new TextBox();
@@ -43,6 +44,7 @@
             OpenFolder_CheckBox = new CheckBox();
             Label_Version = new Label();
             pictureBox1 = new PictureBox();
+            toolTip1 = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             Button_Love2d.Size = new Size(113, 23);
             Button_Love2d.TabIndex = 0;
             Button_Love2d.Text = "Löve2D Path";
+            toolTip1.SetToolTip(Button_Love2d, "The directory where Love2D is installed.");
             Button_Love2d.UseVisualStyleBackColor = true;
             Button_Love2d.Click += btnBrowse_Click;
             // 
@@ -99,6 +102,7 @@
             Button_Game.Size = new Size(113, 23);
             Button_Game.TabIndex = 5;
             Button_Game.Text = "Game Path";
+            toolTip1.SetToolTip(Button_Game, "The path to your games content.");
             Button_Game.UseVisualStyleBackColor = true;
             Button_Game.Click += btnBrowse_Click;
             // 
@@ -233,5 +237,6 @@
         private CheckBox OpenFolder_CheckBox;
         private Label Label_Version;
         private PictureBox pictureBox1;
+        private ToolTip toolTip1;
     }
 }
